@@ -45,6 +45,22 @@ IMUL BL
 
 ADD AX,3  
 
+
+;33/ (4*5-4)
+MOV AL, 4 
+MOV BL, 5
+
+MUL BL
+ 
+SUB AL, 4
+
+MOV BL, AL
+
+MOV AL, 33
+
+DIV BL ;Remainder stored in AH, Quotent stored in AL 
+
+
 ; (3 * 3) + 5 * ( 2 +5)
 
 MOV AL, 3
@@ -67,4 +83,10 @@ MOV CL, 5
 MUL CL 
 
 ; 35 + 9
-ADD AL, BL
+ADD AL, BL    
+
+
+; -23 / 4
+MOV AL, -23  
+MOV BL, 4  
+IDIV BL  ;Remainder stored in AH, Quotent stored in AL
